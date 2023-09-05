@@ -1,0 +1,26 @@
+[
+  {
+    "rua": "CSA 2",
+    "cep": "72015-025",
+    "complemento": "",
+    "bairro": "Taguatinga Sul (Taguatinga)",
+    "cidade": "Brasília",
+    "estado": "DF"
+  },
+  {
+    "rua": "Avenida Boa Viagem",
+    "cep": "51020-000",
+    "complemento": "de 2176/2177 a 3077/3078",
+    "bairro": "Boa Viagem",
+    "cidade": "Recife",
+    "estado": "PE"
+  },
+  {
+    "rua": "Rua Barão de Cataguases",
+    "cep": "36015-370",
+    "complemento": "",
+    "bairro": "Santa Helena",
+    "cidade": "Juiz de Fora",
+    "estado": "MG"
+  }
+]
