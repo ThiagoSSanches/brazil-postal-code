@@ -1,5 +1,6 @@
 package principal;
 
+import modelo.AdicionaNaLista;
 import modelo.ConsultaCep;
 import modelo.EnderecoViacep;
 import modelo.GeradorDeArquivo;
@@ -13,6 +14,8 @@ public class Main {
         String busca = "";
         ConsultaCep consultaCep = new ConsultaCep();
         EnderecoViacep novoEndereco = null;
+        AdicionaNaLista add = new AdicionaNaLista();
+
 
         while (!busca.equalsIgnoreCase("sair")) {
 
@@ -25,15 +28,18 @@ public class Main {
 
             try {
                 novoEndereco = consultaCep.buscaEndereco(busca);
+
+                add.guardaEndereco(novoEndereco);
                 System.out.println(novoEndereco);
 
             } catch (RuntimeException e) {
                 System.out.println(e.getMessage());
-                System.out.println("Finalizando a aplicação");
+                System.out.println("Por favor verifique o número do CEP");
             }
         }
         GeradorDeArquivo gerador = new GeradorDeArquivo();
-        gerador.salvaJson(novoEndereco);
+        System.out.println(add);
+        gerador.salvaJson(add);
 
     }
 }

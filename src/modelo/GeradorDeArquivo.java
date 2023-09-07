@@ -9,12 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GeradorDeArquivo {
-    public void salvaJson(EnderecoViacep endereco) throws IOException {
-        List<EnderecoViacep> enderecos = new ArrayList<>();
-        enderecos.add(endereco);
+    public void salvaJson(AdicionaNaLista endereco) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        FileWriter escrita = new FileWriter(endereco.cep() + ".json");
-        escrita.write(gson.toJson(enderecos));
+        FileWriter escrita = new FileWriter("enderecos.json");
+        escrita.write(gson.toJson(endereco.getEnderecos()));
         escrita.close();
     }
 }
